@@ -1,0 +1,9 @@
+#skills {
+  position: relative;
+  width: 100%; /* Ensure the parent has a defined width */
+  overflow-x: hidden; /* Hide the overflowing logos once they reach the end */
+}
+
+.motion-container {
+  white-space: nowrap; /* Ensure the icons don't break into multiple lines */
+}
