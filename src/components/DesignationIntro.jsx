@@ -1,6 +1,6 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaEye } from "react-icons/fa"; // Import both icons
 
 const DesignationIntro = () => {
   return (
@@ -22,10 +22,20 @@ const DesignationIntro = () => {
         <p className="mt-3 text-gray-300 text-lg leading-relaxed">
           Passionate about building scalable web applications and enhancing user experiences with modern web technologies.
         </p>
-        <div className="mt-5 flex justify-center md:justify-start">
-          <button className="flex items-center bg-purple-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-purple-600 transition duration-300">
-            <FaDownload className="mr-2" /> Download Resume
-          </button>
+        <div className="mt-5 flex flex-col md:flex-row gap-4 justify-center md:justify-start items-center">
+          {/* Download Resume Button */}
+          <a href="/Resume.pdf" download>
+            <button className="flex items-center bg-purple-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-purple-600 transition duration-300">
+              <FaDownload className="mr-2" /> Download Resume
+            </button>
+          </a>
+
+          {/* View Resume Button */}
+          <a href="https://drive.google.com/file/d/1Hp8PeSo4J4pWUMXXLMcTDxkcl6c9Fria/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <button className="flex items-center bg-purple-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-purple-600 transition duration-300">
+              <FaEye className="mr-2" /> View Resume
+            </button>
+          </a>
         </div>
       </div>
     </div>
